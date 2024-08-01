@@ -1,7 +1,8 @@
 <script setup>
 import Summary from '../elements/Summary.vue'
 import Card from '../elements/Card.vue'
-const data = [
+import AnimScroll from '../elements/AnimScroll.vue'
+const Cards = [
     {
         title: 'Loremipsum',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, est?',
@@ -15,10 +16,22 @@ const data = [
 ]
 </script>
 <template>
-    <div class="max-w-screen-lgmx-auto">
-        <div class="flex gap-9">
-            <Summary />
+    <section class="mt-20">
+        <div class="max-w-screen-lg mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="flex justify-center items-center">
+                    <anim-scroll delay="1">
+                    <Summary class="max-w-[460px]" />
+                    </anim-scroll>
+                </div>
+                <div class="" v-for="item in Cards" :key="item">
+                    <anim-scroll delay="1">
+                    <Card :title="item.title" />
+                    </anim-scroll>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
 
 </template>
