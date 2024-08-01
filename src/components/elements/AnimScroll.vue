@@ -7,6 +7,10 @@ const props = defineProps({
     delay:{
         type:Number,
         default:0
+    },
+    tg:{
+        type:String,
+        default:'.sc-ite'
     }
 })
 
