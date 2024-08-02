@@ -17,6 +17,10 @@ const props = defineProps({
     readmore_text:{
         type:String,
         default:'Selanjutnya'
+    },
+    show_readmore:{
+        type:Boolean,
+        default:true,
     }
 })
 </script>
@@ -26,10 +30,10 @@ const props = defineProps({
             <span class=" tracking-wide uppercase ls">{{ props.subtitle }}</span>
             <h2 class="text-primary-500">{{ props.title }}</h2>
         </div>
-        <p>
-
-            {{ props.summary }}
-        </p>
-        <ReadMore :name="props.readmore_text" :link="props.link" />
+        <p> {{ props.summary }} </p>
+        <div  v-if="props.show_readmore" >
+            <ReadMore :name="props.readmore_text" :link="props.link" />
+        </div>
+       
     </div>
 </template>

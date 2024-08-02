@@ -61,7 +61,7 @@ const goPrev = () => {
             <div class=" lg:col-span-5 flex flex-col justify-center items-center p-6 lg:pl-36">
                 <anim-scroll>
                     <div class="max-w-[500px] w-full p-6 shrink-0 ">
-                        <Summary title="Sebuah Berita" subtitle="Berita Terkini" summary="" readmore_text="Telusuri semua berita" link="#" class="summary" />
+                        <Summary title="News Update" subtitle="Don't miss the latest news" summary="" readmore_text="Telusuri semua berita" link="#" class="summary" />
                     </div>
                 </anim-scroll>
             </div>
