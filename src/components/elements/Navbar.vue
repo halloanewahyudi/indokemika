@@ -4,6 +4,11 @@ import Hamburger from './Hamburger.vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onMounted, ref } from 'vue'
+import IconPhoneVue from '../icons/IconPhone.vue'
+import IconMiailVue from '../icons/IconMiail.vue'
+import IconInstagramVue from '../icons/IconInstagram.vue'
+import IconYoutubeVue from '../icons/IconYoutube.vue'
+
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger)
     gsap.fromTo('.navbar', {
@@ -64,6 +69,22 @@ const buka = ref(false)
                             <li><a href="#">Rubber Chemicals</a></li>
                             <li><a href="#"> Special Project</a></li>
                         </ul>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center gap-4 border-t pt-5 border-primary-300">
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <span class="flex gap-2 items-center text-sm">
+                        <IconPhoneVue /> 
+                        <span> 021 xxx xxx xxx </span>
+                    </span>
+                    <span class="flex gap-2 items-center text-sm">
+                        <IconMiailVue /> 
+                        <span>somename@domain.co.id</span>
+                    </span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                   <IconYoutubeVue />
+                   <IconInstagramVue />
                     </div>
                 </div>
             </div>
