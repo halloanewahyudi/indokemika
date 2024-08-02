@@ -54,7 +54,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll);
 });
-
 </script>
 <template>
   <main class="plus-jakarta-sans-font">
@@ -87,10 +86,12 @@ onUnmounted(() => {
 content: '';
 @apply border-l border-primary-200  block absolute h-14 top-0 bottom-0;
 }
-.bullet::after:last-child{
- display: none;
+
+.bullet::after > :last-child {
+  display: none;
 }
 .bullet.active{
   @apply bg-primary-500
 }
+
 </style>
