@@ -5,6 +5,9 @@ import SectionTwo from './components/sections/SectionTwo.vue'
 import SectionThree from './components/sections/SectionThree.vue'
 import SectionFour from './components/sections/SectionFour.vue'
 import SectionFive from './components/sections/SectionFive.vue'
+import SectionSix from './components/sections/SectionSix.vue'
+import SectionFooter from './components/sections/SectionFooter.vue'
+
 </script>
 <template>
   <main class="plus-jakarta-sans-font">
@@ -15,6 +18,8 @@ import SectionFive from './components/sections/SectionFive.vue'
   <SectionThree />
   <SectionFour class="relative z-10" />
   <SectionFive class="relative -mt-48 bottom-0 z-0 " />
+  <SectionSix />
+  <SectionFooter />
 </div>
   </main>
 
