@@ -7,7 +7,24 @@ import SectionFour from './components/sections/SectionFour.vue'
 import SectionFive from './components/sections/SectionFive.vue'
 import SectionSix from './components/sections/SectionSix.vue'
 import SectionFooter from './components/sections/SectionFooter.vue'
+import Loading from './components/elements/Loading.vue'
 import { ref, onMounted, onUnmounted } from 'vue';
+
+// State untuk mengontrol tampilan loading
+const isLoading = ref(true);
+
+// Fungsi untuk mensimulasikan proses loading
+const simulateLoading = () => {
+  isLoading.value = true;
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 3000); // Durasi loading 3 detik
+};
+
+// Set loading to false after initial load
+setTimeout(() => {
+  isLoading.value = false;
+}, 3000);
 
 // Definisikan section data
 const sections = ref([
@@ -67,7 +84,10 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <main class="plus-jakarta-sans-font">
+  <div v-if="isLoading">
+    <Loading />
+  </div>
+  <main v-else class="plus-jakarta-sans-font">
 <navbar/>
 <div>
   <div>
