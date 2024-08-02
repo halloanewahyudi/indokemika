@@ -45,7 +45,7 @@ const buka = ref(false)
     </div>
 
         <transition name="slide" ><!--slide dari kanan -->
-            <div v-if="buka" class="menu-container">
+            <div  class="menu-container">
             <div  :class="{'buka-menu': buka }" class="menu fixed top-0 w-full h-screen py-16 px-6 lg:px-10 lg:w-1/2 bg-primary-100  right-0 z-40">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center h-full">
                     <div class="">
