@@ -5,7 +5,7 @@ const props = defineProps({
         type: String,
         default: 'Sebuah Judul'
     },
-    subTitle: {
+    subtitle: {
         type: String,
         default: 'Sebuah sub title'
     },
@@ -13,19 +13,23 @@ const props = defineProps({
         type: String,
         default: ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nulla porro, eius quis corrupti facere!'
     },
-    link: String
+    link: String,
+    readmore_text:{
+        type:String,
+        default:'Selanjutnya'
+    }
 })
 </script>
 <template>
     <div class="flex flex-col gap-4 ">
         <div>
-            <span class=" tracking-wide uppercase">{{ props.subTitle }}</span>
+            <span class=" tracking-wide uppercase">{{ props.subtitle }}</span>
             <h2 class="text-primary-500">{{ props.title }}</h2>
         </div>
         <p>
 
             {{ props.summary }}
         </p>
-        <ReadMore :link="props.link" />
+        <ReadMore :name="props.readmore_text" :link="props.link" />
     </div>
 </template>

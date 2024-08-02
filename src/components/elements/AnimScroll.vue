@@ -16,19 +16,23 @@ const props = defineProps({
 
 onMounted(()=>{
 gsap.registerPlugin(ScrollTrigger);
-  const items = gsap.utils.toArray('.sc-item')
-  
-  items.forEach(element => {
-     gsap.from(element, {
-        duration: 5, 
-        delay:props.delay,
-        y:100,
-        scrollTrigger:{
-            trigger:element,
-            scrub:1
+
+   ///=================
+   gsap.utils.toArray('.sc-item').forEach(box => {
+      gsap.fromTo(box, 
+        { y: 100 , duration:2},
+        { 
+          y: 0,
+          scrollTrigger: {
+            trigger: box,
+            start: 'top 80%', // Memulai animasi saat box muncul 80% dari bawah viewport
+            end: 'top 20%', // Mengakhiri animasi saat box mencapai 20% dari atas viewport
+            scrub: true, // Animasi mengikuti scroll
+          }
         }
-    })
-   });
+      );
+    });
+   //==============
 })
 </script>
 <template>

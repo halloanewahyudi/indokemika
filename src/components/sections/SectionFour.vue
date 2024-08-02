@@ -4,7 +4,7 @@ import AnimScroll from '../elements/AnimScroll.vue'
 <template>
     <section class="py-20">
         <div class="max-w-screen-lg mx-auto ">
-            <div class="rounded-xl flex justify-center items-center p-6 lg:p-10  min-h-[300px] relative overflow-hidden"
+            <div class="rounded-xl flex justify-center items-center p-6 lg:p-10  min-h-[380px] relative overflow-hidden"
                 style="background-image: url('https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/bg-section.jpeg');">
                 <div class="absolute bg-black top-0 left-0 w-full h-full opacity-60"></div>
                 <anim-scroll>
