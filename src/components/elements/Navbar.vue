@@ -18,6 +18,10 @@ onMounted(() => {
         }
 
     })
+
+   gsap.fromTo('.buka-menu', {
+    opacity:0
+   }, {duration: 1, opacity:0.7})
 })
 const buka = ref(false)
 </script>
@@ -34,10 +38,10 @@ const buka = ref(false)
             </nav>
         </div>
     </div>
-   
-    <div v-if="buka">
+
         <transition name="slide" ><!--slide dari kanan -->
-            <div class="menu fixed top-0 w-full h-screen py-16 px-6 lg:px-10 lg:w-1/2 bg-primary-100  right-0 z-40">
+            <div v-if="buka" class="menu-container">
+            <div  :class="{'buka-menu': buka }" class="menu fixed top-0 w-full h-screen py-16 px-6 lg:px-10 lg:w-1/2 bg-primary-100  right-0 z-40">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center h-full">
                     <div class="">
                         <ul class="menu-primary text-primary-600 flex flex-col gap-5 lg:text-2xl font-semibold">
@@ -63,11 +67,27 @@ const buka = ref(false)
                     </div>
                 </div>
             </div>
-        </transition>
     </div>
-
+</transition>
 </template>
 <style scoped>
+
+.menu {
+  @apply translate-x-full transition-all duration-300 ease-linear
+}
+
+.menu.buka-menu {
+  @apply translate-x-0 transition-all duration-300 ease-linear
+}
+
+/* Tambahkan transisi fade untuk kontainer */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
 .menu-primary a {
     @apply flex items-center gap-2
 }
@@ -85,13 +105,5 @@ const buka = ref(false)
     @apply hover:text-primary-600 hover:font-medium duration-200;
 }
 
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.3s ease-in-out;
-}
 
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateX(100%); 
-}
 </style>
