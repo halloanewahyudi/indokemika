@@ -23,7 +23,7 @@ const props = defineProps({
 <template>
     <div class="flex flex-col gap-4 ">
         <div>
-            <span class=" tracking-wide uppercase">{{ props.subtitle }}</span>
+            <span class=" tracking-wide uppercase ls">{{ props.subtitle }}</span>
             <h2 class="text-primary-500">{{ props.title }}</h2>
         </div>
         <p>

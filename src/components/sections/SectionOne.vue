@@ -24,12 +24,14 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div class="grid grid-cols-1 md:grid-col-6 lg:grid-cols-12 min-h-screen items-center">
+    <div class="grid grid-cols-1 md:grid-col-6 lg:grid-cols-12 min-h-screen items-center py-16 lg:py-0">
         <div class="md:col-span-2 lg:col-span-4">
-            <div class="text-cover p-6 lg:pl-32 max-w-max w-full lg:w-[640px] relative z-10 lg:-right-28 lg:left-28 ">
-                <h4 class="text"> Lorem ipsum</h4>
-                <h1 class="text text-7xl">Lorem ipsum dolor sit amet </h1>
-                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, repellat!</p>
+            <div class="text-cover flex flex-col gap-5 p-6 lg:pl-28 max-w-max w-full lg:w-[640px] relative z-10 lg:-right-28 lg:left-28 ">
+                <div>
+                    <span class="text text-xl text-primary-500 uppercase ls"> Lorem ipsum</span>
+                    <h1 class="text text-4xl lg:text-8xl">To Create Values </h1>
+                </div>
+                <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
                 <ReadMore link="#" class="text" />
             </div>
         </div>
