@@ -2,11 +2,11 @@
 import { ref, onMounted, nextTick } from 'vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
-
+import slideOne from '../../assets/slide-1.jpg';
 const slides = [
     {
         nama: 'Slides One',
-        image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        image: slideOne
     },
     {
         nama: 'Slide Dua',

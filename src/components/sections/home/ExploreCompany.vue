@@ -36,7 +36,6 @@ onMounted(() => {
             <div class="text-center mb-6">
                 
                 <span class="text-xl">
-                    
                 Video Company Profile
                 </span>
                 <h3>Explore The Company</h3>
