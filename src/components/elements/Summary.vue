@@ -21,7 +21,8 @@ const props = defineProps({
     show_readmore:{
         type:Boolean,
         default:true,
-    }
+    },
+    readmore_position:String
 })
 </script>
 <template>
@@ -32,7 +33,7 @@ const props = defineProps({
         </div>
         <p> {{ props.summary }} </p>
         <div  v-if="props.show_readmore" >
-            <ReadMore :name="props.readmore_text" :link="props.link" />
+            <ReadMore  :name="props.readmore_text" :link="props.link" :class="readmore_position" />
         </div>
        
     </div>

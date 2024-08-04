@@ -9,9 +9,7 @@ export default {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
+        xl: '2rem',
         '2xl': '6rem',
       },
     },

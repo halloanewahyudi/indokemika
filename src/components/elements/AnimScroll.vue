@@ -23,6 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
         { y: 100 , duration:2},
         { 
           y: 0,
+          delay:props.delay,
           scrollTrigger: {
             trigger: box,
             start: 'top 80%', // Memulai animasi saat box muncul 80% dari bawah viewport

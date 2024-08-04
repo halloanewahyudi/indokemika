@@ -1,5 +1,5 @@
 <script setup>
-import Slideshow from '../elements/Slideshow.vue'
+import Slideshow from '../elements/SlideshowTwo.vue'
 import gsap from 'gsap'
 import { onMounted } from 'vue';
 import ReadMore from '../elements/ReadMore.vue'
