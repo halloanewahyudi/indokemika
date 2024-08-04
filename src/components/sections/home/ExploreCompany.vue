@@ -56,13 +56,15 @@ onMounted(() => {
             </div>
         </div>
         <div v-if="bukaVideo">
-      <div class="fixed top-0 left-0 w-full min-h-screen p-6 z-[50] bg-secondary-200 flex flex-col justify-center items-center ">
-           <div class="relative  p-6 lg:p-10">
+      <div class="popup-video fixed top-0 left-0 w-full min-h-screen p-6  bg-secondary-200 flex flex-col justify-center items-center ">
+           <div class="relative p-6 lg:p-10">
             <button class="absolute top-5 right-5" @click="closeVideo"><IconClose class="w-5 h-5" /></button>
-            <video ref="video" class="max-w-[800px] rounded-2xl" />
+            <video ref="video" class="max-w-[800px] rounded-2xl border border-secondary-50 shadow-2xl"/>
            </div>
       </div>
     </div>
     </section>
 
 </template>
+<style scoped>
+</style>
