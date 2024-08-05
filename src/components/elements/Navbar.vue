@@ -50,8 +50,8 @@ const buka = ref(false)
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center h-full">
                     <div class="">
                         <ul class="menu-primary text-primary-600 flex flex-col gap-5 lg:text-2xl font-semibold">
-                            <li><router-link to="/"> Home </router-link></li>
-                            <li><router-link to="/alt"> Home 2 </router-link></li>
+                            <li><a href="/"> Home </a></li>
+                            <li><a href="/alt"> Home 2 </a></li>
                             <li><a href="#"> News & Event </a></li>
                             <li><a href="#"> Contact Us </a></li>
                         </ul>

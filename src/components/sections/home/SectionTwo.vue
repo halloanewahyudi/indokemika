@@ -19,7 +19,7 @@ import AnimScroll from '../../elements/AnimScroll.vue'
             </div>
             <div class="lg:col-span-7">
                 <anim-scroll>
-                    <Summary class="max-w-[500px]" subtitle="who we are"  title="Indokemika takes part in industry efforts " summary="Indokemika is here to enhance quality of lives.  We bring ingredients and materials that made up useful products in detergents, plastics, electronics, motorcycles, cars, phones, building, food, drugs, clean water supply, waste water cleaning process;  practically in things that we touch everyday." link="#" readmore_position="justify-end"/>
+                    <Summary class="max-w-[500px]" subtitle="who we are"  title="Indokemika <br> is here to enhance quality of lives " summary="Indokemika is here to enhance quality of lives.  We bring ingredients and materials that made up useful products in detergents, plastics, electronics, motorcycles, cars, phones, building, food, drugs, clean water supply, waste water cleaning process;  practically in things that we touch everyday." link="#" readmore_position="justify-end"/>
                 </anim-scroll>
             </div>
         </div>

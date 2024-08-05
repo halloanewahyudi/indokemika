@@ -29,7 +29,7 @@ const props = defineProps({
     <div class="flex flex-col gap-4 ">
         <div>
             <span class=" tracking-wide uppercase ls">{{ props.subtitle }}</span>
-            <h2 class="text-primary-500">{{ props.title }}</h2>
+            <h2 class="text-primary-600" v-html="props.title"></h2>
         </div>
         <p> {{ props.summary }} </p>
         <div  v-if="props.show_readmore" >
