@@ -3,6 +3,8 @@ import { ref, onMounted, nextTick } from 'vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 import slideOne from '../../assets/slide-1.jpg';
+import slidetwo from '../../assets/slide-2.jpeg';
+import slidethree from '../../assets/slide-3.jpeg';
 const slides = [
     {
         nama: 'Slides One',
@@ -10,11 +12,11 @@ const slides = [
     },
     {
         nama: 'Slide Dua',
-        image: 'https://plus.unsplash.com/premium_photo-1663047450953-2251c9d5f2b0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        image: slidetwo
     },
     {
         nama: 'Slide 3',
-        image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        image: slidethree
     }
 ];
 
@@ -52,7 +54,7 @@ onMounted(async () => {
         pagination: false
     }" aria-label="My Favorite Images">
         <SplideSlide v-for="(item, index) in slides" :key="index" class="min-h-[80vh] rounded-xl overflow-hidden">
-            <div :style="{ backgroundImage: `url(${item.image})` }" class="min-h-[80vh] w-full block bg-no-repeat bg-cover slide-content"></div>
+            <div :style="{ backgroundImage: `url(${item.image})` }" class="slide min-h-[80vh] w-full block bg-no-repeat bg-center bg-cover slide-content"></div>
         <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-primary-950 to-primary-50 opacity-20"></div>
             </SplideSlide>
 
@@ -91,4 +93,5 @@ onMounted(async () => {
 .custom-pagination .active {
     @apply w-24 duration-300 ;
 }
+
 </style>
