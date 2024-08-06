@@ -28,13 +28,12 @@ const props = defineProps({
 <template>
     <div class="flex flex-col gap-4 ">
         <div>
-            <span class=" tracking-wide uppercase ls">{{ props.subtitle }}</span>
+            <span class=" tracking-wide uppercase ls text-sm">{{ props.subtitle }}</span>
             <h2 class="text-primary-600" v-html="props.title"></h2>
         </div>
         <p> {{ props.summary }} </p>
         <div  v-if="props.show_readmore" >
             <ReadMore  :name="props.readmore_text" :link="props.link" :class="readmore_position" />
         </div>
-       
     </div>
 </template>

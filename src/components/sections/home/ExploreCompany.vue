@@ -45,7 +45,8 @@ onMounted(() => {
                 <anim-scroll>
                     <div class="relative text-center text-white max-w-[600px]">
                         <button @click="popupVideo" class="w-12 h-12 mx-auto rounded-full border border-dashed border-secondary-200 flex justify-center items-center animate-pulse hover:animate-none duration-500">
-                            <IconPlay class="w-10 h-10 text-secondary-200 " />
+                          <!--   <IconPlay class="w-10 h-10 " /> -->
+                            <img src="../../../assets/play.svg" alt="" srcset="" class="w-10 h-10 " >
                         </button>
                 
                         <h4 class="font-normal leading-snug">Global Company that provides creative solutions and added value to stakeholders</h4>
