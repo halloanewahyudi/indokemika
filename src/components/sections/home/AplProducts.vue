@@ -41,7 +41,7 @@ const products = [
 ]
 </script>
 <template>
-    <section class=" py-16  ">
+    <section class=" pt-16  ">
         <div class="max-w-screen-lg mx-auto p-6 apl-products lg:p-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
                 <div class="p-6 max-w-[500px] ">
