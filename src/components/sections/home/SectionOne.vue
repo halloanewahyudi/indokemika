@@ -15,7 +15,7 @@ const textAnim = () => {
         opacity: 0,
         duration: 1,
         y: 100,
-        scale:1.2,
+        scale: 1.2,
         stagger: {
             each: 0.2,
             //  from: 'center',
@@ -29,25 +29,26 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div  class=" relative mt-20">
-            <div class="container relative">
-          <div class="text-cover absolute lg:bottom-5 left-20 -translate-y-1/2 rounded-2xl p-6 lg:p-10 text-secondary-50 bg-opacity-50 backdrop-blur-xl bg-primary-600 border border-primary-300 z-10">
-            <h1 class="text text-4xl lg:text-5xl">To Create Values </h1>
-                <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
-          </div>
-                <Slideshow />
-            </div>
+    <section class=" relative mt-20">
+        <div class="container  relative">
             <div
-                class="absolute top-1/2 -translate-y-1/2 right-6 hidden lg:flex flex-col gap-4 justify-center items-center text-2xl text-primary-500">
-                <a href="#" class="hover:text-primary-500 duration-300">
-                    <IconYoutubeVue />
-                </a>
-                <a href="#" class="hover:text-primary-500 duration-300">
-                    <IconInstagramVue />
-                </a>
-                <a href="#" class="hover:text-primary-500 duration-300">
-                    <IconMiailVue />
-                </a>
+                class="text-cover absolute lg:bottom-5 left-20  lg:-translate-y-1/2 rounded-2xl p-6 lg:p-10 text-secondary-50 bg-opacity-50 backdrop-blur-xl bg-primary-600 border border-primary-300 z-10">
+                <h1 class="text text-4xl lg:text-5xl">To Create Values </h1>
+                <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
             </div>
+            <Slideshow class="lg:px-6 xl:px-0" />
         </div>
+        <div
+            class="absolute rounded-2xl p-4 xl:bg-transparent xl:p-0 top-1/2 -translate-y-1/2 -right-2 xl:right-6  hidden lg:flex flex-col gap-4 justify-center items-center text-2xl text-primary-500">
+            <a href="#" class="hover:text-primary-600 duration-300">
+                <IconYoutubeVue />
+            </a>
+            <a href="#" class="hover:text-primary-600 duration-300">
+                <IconInstagramVue />
+            </a>
+            <a href="#" class="hover:text-primary-600 duration-300">
+                <IconMiailVue />
+            </a>
+        </div>
+    </section>
 </template>

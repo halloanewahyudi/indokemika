@@ -11,22 +11,22 @@ import IconArrowRightVue from '../../icons/IconArrowRight.vue';
 
 const posts = [
     {
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'Competitive Advantage 1',
         description: ' Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
         image: 'https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/gkuc4tmhoiy.jpg'
     },
     {
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'Competitive Advantage 2',
         description: ' Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
         image: 'https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/cuqp2jzz_ly.jpg'
     },
     {
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'Competitive Advantage 3',
         description: ' Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
         image: 'https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/pwckf7l4-no.jpg'
     },
     {
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'Competitive Advantage 4',
         description: ' Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
         image: 'https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/ww5854gam1c.jpg'
     }
