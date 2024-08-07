@@ -58,7 +58,7 @@ onMounted(async () => {
         <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-primary-950 to-primary-50 opacity-20"></div>
             </SplideSlide>
 
-        <ul class="custom-pagination">
+        <ul class="custom-pagination ">
             <li v-for="(slide, index) in slides" :key="index">
                 <button :class="{ active: activeIndex === index }" @click="goToSlide(index)">
                 </button>
@@ -78,14 +78,14 @@ onMounted(async () => {
 }
 
 .custom-pagination {
-    @apply absolute flex gap-6 left-3 bottom-3 items-center z-10 min-w-max 
+    @apply absolute flex gap-6 left-1/2 -translate-x-1/2 bottom-3 items-center z-10 min-w-max  mx-auto 
 }
 .custom-pagination::before{
     content: '';
-   @apply w-full h-1 border-b border-white inline-block absolute top-3;
+   @apply w-full h-1 border-b border-secondary-200 inline-block absolute top-3;
 }
 .custom-pagination button {
-    @apply w-2 h-2 rounded-full bg-white;
+    @apply w-2 h-2 rounded-full bg-secondary-200;
 }
 
 .custom-pagination .active {
