@@ -67,7 +67,7 @@ const products = [
                         <ul class="flex flex-col divide-y divide-secondary-200">
                             <li class="py-2.5  font-semibold flex justify-between items-center" v-for=" product in products"
                                 :key="product"> {{ product.title }}
-                                <IconArrowRightRounded class="w-6 h-6 text-secondary-500" />
+                                <IconArrowRightRounded class="w-6 h-6 text-[#95D2B3]" />
                             </li>
                         </ul>
                     </div>
