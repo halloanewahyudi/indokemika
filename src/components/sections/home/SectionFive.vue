@@ -41,8 +41,13 @@ const posts = [
                 <p>We have built credibility and long-term excellence by listening to our clients, and giving the solution to their products since 1987.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-10 items-center">
-                <div v-for="item in posts" :key="item">
-                    <Cover :image="item.image" :title="item.title" :descripiton="item.description" :height="400" class="text-center" />
+                <div v-for="item in posts" :key="item" class="text-center flex flex-col gap-3 ">
+                    <div class="rounded-2xl overflow-hidden  shadow-2xl">
+                        <img :src="item.image" alt="" srcset="" class="w-full h-[240px] object-fill rounded-2xl hover:scale-105 duration-300">
+                    </div>
+                    <h5 class="text-lg font-medium" v-html="item.title"></h5>
+                    <p v-html="item.description"></p>
+                   
                 </div>
             </div>
         </div>

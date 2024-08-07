@@ -6,6 +6,8 @@ import ReadMore from '../../elements/ReadMore.vue'
 import IconInstagramVue from '../../icons/IconInstagram.vue';
 import IconYoutubeVue from '../../icons/IconYoutube.vue';
 import IconMiailVue from '../../icons/IconMiail.vue';
+import SlideVideo from '../../elements/SlideVideo.vue'
+
 
 const textAnim = () => {
     const items = gsap.utils.toArray('.text-cover .text')

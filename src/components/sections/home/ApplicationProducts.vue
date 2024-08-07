@@ -41,7 +41,7 @@ const products = [
 ]
 </script>
 <template>
-    <section class="py-16 min-h-scr een bg-secondary-50">
+    <section class="py-16 min-h-scr een bg-neutral-50">
         <div class="max-w-screen-lg mx-auto  px-6">
             <div class="grid grid-cols-1 lg:grid-cols-3  items-center">
                 <div>

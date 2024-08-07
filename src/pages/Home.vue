@@ -82,11 +82,11 @@ onUnmounted(() => {
          <div class="flex gap-2 items-center justify-center">
           <button class="bullet w-2 h-2 block rounded-full border-primary-500 border shrink-0"   @click="scrollToSection(section.index)" :class="{ active: activeSection === section.index }">
           </button>
-          <span class="number absolute -right-3 text-sm">
+          <span class="number absolute -right-3 text-sm text-primary-500">
             {{ section.index+1 }}
           </span>
          </div>
-          <div class="line w-0.5 h-16 bg-primary-500  block bodrder-l"></div>
+          <div class="line w-0.5 h-16 bg-primary-100  block bodrder-l"></div>
         </div>
     </div>
 
@@ -108,7 +108,7 @@ onUnmounted(() => {
 }
 .nav-bullet::after{
    content: '';
-   @apply border-l border-primary-500 block h-full w-2;
+   @apply border-l border-primary-200 block h-full w-2 ;
 }
 .nav-item:last-child .line{
   display: none;

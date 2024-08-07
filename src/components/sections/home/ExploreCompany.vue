@@ -48,8 +48,8 @@ onMounted(() => {
                           <!--   <IconPlay class="w-10 h-10 " /> -->
                             <img src="../../../assets/play.svg" alt="" srcset="" class="w-10 h-10 " >
                         </button>
-                
-                        <h4 class="font-normal leading-snug">Global Company that provides creative solutions and added value to stakeholders</h4>
+                <!-- 
+                        <h4 class="font-normal leading-snug">Global Company that provides creative solutions and added value to stakeholders</h4> -->
                     </div>
                 </anim-scroll>
             </div>

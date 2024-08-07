@@ -2,9 +2,9 @@
 import { ref, onMounted, nextTick } from 'vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
-import slideOne from '../../assets/slide-1.jpg';
-import slidetwo from '../../assets/slide-2.jpeg';
-import slidethree from '../../assets/slide-3.jpeg';
+import slideOne from '../../assets/slider-home1.jpg';
+import slidetwo from '../../assets/slider-home2.jpg';
+import slidethree from '../../assets/slider-home3.jpg';
 const slides = [
     {
         nama: 'Slides One',
@@ -65,8 +65,6 @@ onMounted(async () => {
             </li>
         </ul>
     </Splide>
-
-
 </template>
 
 <style scoped>
@@ -75,8 +73,8 @@ onMounted(async () => {
 }
 
 .splide__slide.is-active .slide-content {
-    transform: scale(1.5);
-    transition: transform 10s;
+    transform: scale(1.2);
+    transition: all 7s ease-in;
 }
 
 .custom-pagination {
