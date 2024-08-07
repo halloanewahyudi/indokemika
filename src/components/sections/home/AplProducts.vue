@@ -47,9 +47,7 @@ const products = [
                 <div class="p-6 max-w-[500px] ">
                     <div>
                         <h3 class="text-primary-600"> Products & Application </h3>
-                        <p>Indokemika's products portfolio is characterized by a board range of chemicals catering to
-                            the
-                            requerements of various industry</p>
+                        <p>Indokemika's products portfolio is characterized by a board range of chemicals catering to the requerements of various industry</p>
                     </div>
                     <anim-scroll>
                         <img src="../../../assets/slider-home2.jpg" alt=""

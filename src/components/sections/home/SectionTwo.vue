@@ -22,7 +22,7 @@ import AnimScroll from '../../elements/AnimScroll.vue'
                 <div class="lg:col-span-7 py-16">
                     <anim-scroll>
                         <Summary class="max-w-[500px]" subtitle="Who We Are"
-                            title=" is Here to Enhance Quality of Lives "
+                            title="to Enhance Quality of Lives "
                             summary="Indokemika is here to enhance quality of lives.  We bring ingredients and materials that made up useful products in detergents, plastics, electronics, motorcycles, cars, phones, building, food, drugs, clean water supply, waste water cleaning process;  practically in things that we touch everyday."
                             link="#" readmore_position="justify-end" />
                     </anim-scroll>
