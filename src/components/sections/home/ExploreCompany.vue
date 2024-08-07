@@ -37,7 +37,7 @@ onMounted(() => {
                 <span class="text-xl">
                 Video Company Profile
                 </span>
-                <h3>Explore The Company</h3>
+                <h3 class="text-primary-600">Explore The Company</h3>
             </div>
             <div class="rounded-xl flex justify-center items-center p-6 lg:p-10  min-h-[380px] relative overflow-hidden"
                 style="background-image: url('https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/bg-section.jpeg');">

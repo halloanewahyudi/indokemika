@@ -53,7 +53,7 @@ onMounted(async () => {
         arrows: false,
         pagination: false
     }" aria-label="My Favorite Images">
-        <SplideSlide v-for="(item, index) in slides" :key="index" class="min-h-[80vh]  overflow-hidden">
+        <SplideSlide v-for="(item, index) in slides" :key="index" class="min-h-[80vh] rounded-xl overflow-hidden">
             <div :style="{ backgroundImage: `url(${item.image})` }" class="slide min-h-[80vh] w-full block bg-no-repeat bg-center bg-cover slide-content"></div>
         <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-primary-950 to-primary-50 opacity-20"></div>
             </SplideSlide>
