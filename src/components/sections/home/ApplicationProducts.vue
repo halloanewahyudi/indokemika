@@ -61,11 +61,13 @@ const products = [
                         class=" object-cover object-center w-full max-w-[560px] lg:w-[560px] h-[380px] rounded-xl">
                 </anim-scroll>
                 <anim-scroll :delay="1">
-                    <div class="p-6 lg:p-10 rounded-xl bg-white lg:top-32 relative border shadow-2xl">
-                        <ul class="flex flex-col divide-y">
+                    <div class="p-6 lg:p-10 rounded-xl bg-secondary-50 lg:top-32 relative border border-secondary-500 shadow-2xl">
+                        <h5 class="font-semibold" >List of Product & Application</h5>
+                        <hr class="border-secondary-200 my-5">
+                        <ul class="flex flex-col divide-y divide-secondary-200">
                             <li class="py-2.5  font-semibold flex justify-between items-center" v-for=" product in products"
                                 :key="product"> {{ product.title }}
-                                <IconArrowRightRounded class="w-6 h-6 text-primary-600" />
+                                <IconArrowRightRounded class="w-6 h-6 text-secondary-500" />
                             </li>
                         </ul>
                     </div>

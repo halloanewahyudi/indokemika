@@ -94,7 +94,6 @@ onUnmounted(() => {
       <SectionOne data-index="0" id="one" class="section"  />
         <SectionTwo data-index="1" id="two" class="section" />
         <ApplicationProducts data-index="2" id="three" class="section" />
-        <AplProducts data-index="2" id="three" class="section" />
         <ExploreCompany data-index="3" id="four" class="section relative z-10" />
         <SectionFive data-index="4" id="five" class="section relative -mt-48 bottom-0 z-0 " />
         <SectionFooter />
