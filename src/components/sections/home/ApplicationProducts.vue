@@ -56,7 +56,7 @@ const products = [
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <anim-scroll>
-                    <img src="https://img.freepik.com/free-photo/elevated-view-girl-s-hand-with-sprinkles_23-2147824140.jpg?t=st=1722732220~exp=1722735820~hmac=962cf1f8c7d4312b8da72066bac5bb1210bb669cb2ee93325269432a6fade390&w=740"
+                    <img src="../../../assets/biji-plastik2.jpg"
                         alt=""
                         class=" object-cover object-center w-full max-w-[560px] lg:w-[560px] h-[380px] rounded-xl">
                 </anim-scroll>
