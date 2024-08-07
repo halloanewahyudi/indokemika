@@ -45,7 +45,7 @@ const products = [
         <div class="max-w-screen-lg mx-auto  px-6">
             <div class="grid grid-cols-1 lg:grid-cols-3  items-center">
                 <div>
-                    <h2>
+                    <h2 class="text-transparent bg-gradient-to-r from-neutral-900 to-red-700 bg-clip-text">
                         Products & Application
                     </h2>
                 </div>
