@@ -127,6 +127,7 @@ onUnmounted(() => {
 }
 .sec2{
     background: url('../assets/bg-aksen.png')no-repeat right center;
-    background-size: 32%;
+    background-size: 30%;
+    background-position-x: 110%;
 }
 </style>
