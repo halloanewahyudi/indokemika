@@ -1,5 +1,5 @@
 <template>
-    <footer class="pt-16 bg-primary-800 text-primary-200 ">
+    <footer class="sec-footer pt-16 bg-primary-800 text-primary-200 ">
         <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 justify-between">
                 <div class="item col-span-3">
@@ -38,3 +38,6 @@
         </div>
     </footer>
 </template>
+<style scoped>
+
+</style>
