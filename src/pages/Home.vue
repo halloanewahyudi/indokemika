@@ -15,6 +15,7 @@ import AplProducts from '../components/sections/home/AplProducts.vue'
 import ApplicationProducts from '../components/sections/home/ApplicationProducts.vue'
 import Loading from '../components/elements/Loading.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
+import Products from '../components/sections/home/Products.vue'
 
 
 // Definisikan section data
@@ -93,7 +94,8 @@ onUnmounted(() => {
 
       <SectionOne data-index="0" id="one" class="section"  />
         <SectionTwo data-index="1" id="two" class="section sec2" />
-        <ApplicationProducts data-index="2" id="three" class="section" />
+       <!--   <ApplicationProducts data-index="2" id="three" class="section" /> -->
+         <Products data-index="2" id="three" class="section" />
         <ExploreCompany data-index="3" id="four" class="section relative z-10" />
         <SectionFive data-index="4" id="five" class="section relative -mt-48 bottom-0 z-0 " />
         <SectionFooter />
