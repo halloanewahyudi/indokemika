@@ -31,7 +31,7 @@ onMounted(() => {
 
 </script>
 <template>
-    <section class="pt-32 pb-20">
+    <section class="py-16">
         <div class="max-w-screen-lg mx-auto ">
             <div class="text-center mb-6">
                 <span class="text-xl">
