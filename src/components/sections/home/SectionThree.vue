@@ -26,7 +26,7 @@ const Cards = [
 ]
 </script>
 <template>
-    <section class="my-20">
+    <section class="sec3 my-20">
         <div class="max-w-screen-lg mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
                 <div class="flex justify-center items-center">
@@ -56,6 +56,7 @@ const Cards = [
     </section>
 </template>
 <style scoped>
+
 .sec-3-item:nth-child(3),
 .sec-3-item:nth-child(5) {
     @apply -top-20 relative;

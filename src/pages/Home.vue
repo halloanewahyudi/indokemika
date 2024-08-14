@@ -92,7 +92,7 @@ onUnmounted(() => {
     </div>
 
       <SectionOne data-index="0" id="one" class="section"  />
-        <SectionTwo data-index="1" id="two" class="section" />
+        <SectionTwo data-index="1" id="two" class="section sec2" />
         <ApplicationProducts data-index="2" id="three" class="section" />
         <ExploreCompany data-index="3" id="four" class="section relative z-10" />
         <SectionFive data-index="4" id="five" class="section relative -mt-48 bottom-0 z-0 " />
@@ -123,5 +123,8 @@ onUnmounted(() => {
 .nav-item.active .number{
   display: block;
 }
-
+.sec2{
+    background: url('../assets/bg-aksen.png')no-repeat right center;
+    background-size: 32%;
+}
 </style>

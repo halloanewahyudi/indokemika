@@ -4,7 +4,7 @@ import Card from '../../elements/Card.vue'
 import AnimScroll from '../../elements/AnimScroll.vue'
 </script>
 <template>
-    <section class="relative mb-20">
+    <section class=" relative mb-20">
  <div class="rounded-2xl absolute top-24 lg:-left-16 w-[500px] h-[380px] lg:h-[480px] overflow-hidden">
     <img src="../../../assets/who-we-are2.png" alt=""
     class="  ">
@@ -32,3 +32,6 @@ import AnimScroll from '../../elements/AnimScroll.vue'
     </section>
 
 </template>
+<style scoped>
+
+</style>
