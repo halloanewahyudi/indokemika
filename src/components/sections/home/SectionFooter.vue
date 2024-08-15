@@ -32,7 +32,7 @@
         <div class="py-2 mt-8 border-t border-primary-700">
             <div class="container text-center">
                 <span class="text-sm">
-                    © 2024 PT. Indokemika Jayatama All rights reserved
+                     PT. Indokemika Jayatama © 2024 | Powered by proweb
                 </span>
             </div>
         </div>
