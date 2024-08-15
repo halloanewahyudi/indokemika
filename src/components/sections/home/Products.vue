@@ -4,7 +4,8 @@ import '@splidejs/vue-splide/css';
 import { onMounted, ref } from 'vue';
 import IconArrowLeftVue from '../../icons/IconArrowLeft.vue';
 import IconArrowRightVue from '../../icons/IconArrowRight.vue';
-
+import phamachy from '../../../assets/indokemika-produk-pharmacy.jpg';
+import food from '../../../assets/indokemika-produk-food-ingridient.jpg' ;
 
 const splide = ref(null)
 
@@ -27,11 +28,11 @@ const products = [
     },
     {
         name: '  Pharmaceutical Ingredients ',
-        image: 'https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/indokemika-produk4.jpg'
+        image: phamachy
     },
     {
         name: ' Food Ingredients ',
-        image: 'https://beta2024.indokemika-group.com/wp-content/uploads/2024/05/indokemika-produk2.jpg'
+        image: food
     },
     {
         name: ' Oleo & Performance Chemicals  ',
