@@ -32,7 +32,7 @@ onMounted(() => {
     <section class=" relative mt-20">
         <div class="container  relative">
             <div
-                class="text-cover absolute lg:bottom-5 left-20  lg:-translate-y-1/2 rounded-2xl p-6 lg:p-10 text-secondary-50 bg-opacity-50 backdrop-blur-xl bg-primary-600 border border-primary-300 z-10">
+                class="text-cover absolute lg:bottom-5 left-20  lg:-translate-y-1/2 rounded-2xl p-6 lg:p-10 text-secondary-50 z-10">
                 <h1 class="text text-4xl lg:text-5xl">To Create Values </h1>
                 <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
             </div>
