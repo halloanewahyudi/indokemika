@@ -1,6 +1,6 @@
 <script setup>
 import IconMenu from '../icons/IconMenu.vue'
-import Hamburger from './Hamburger.vue'
+import Hamburger from '../elements/Hamburger.vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onMounted, ref } from 'vue'
@@ -12,10 +12,12 @@ import IconYoutubeVue from '../icons/IconYoutube.vue'
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger)
     gsap.fromTo('.navbar', {
-        background: 'transparent'
+        background: 'transparent',
+        borderBottom:'none',
     }, {
         duration: 1,
         background: '#fff',
+        borderBottom:'1px solid #e7e7e7',
         scrollTrigger: {
             trigger: '.navbar',
             start: 'top top',
@@ -24,9 +26,9 @@ onMounted(() => {
 
     })
 
-   gsap.fromTo('.buka-menu', {
-    opacity:0
-   }, {duration: 1, opacity:0.7})
+    gsap.fromTo('.buka-menu', {
+        opacity: 0
+    }, { duration: 1, opacity: 0.7 })
 })
 const buka = ref(false)
 </script>
@@ -35,7 +37,9 @@ const buka = ref(false)
         <div class="container">
             <nav class="flex justify-between items-center gap-2 py-2">
                 <div class="logo">
-                    <img src="../../assets/logo.png" alt="" srcset="" class="h-14">
+                    <router-link to="/">
+                        <img src="../../assets/logo.png" alt="" srcset="" class="h-14">
+                    </router-link>
                 </div>
                 <div>
                     <hamburger @click="buka = !buka" />
@@ -44,14 +48,15 @@ const buka = ref(false)
         </div>
     </div>
 
-        <transition name="slide" ><!--slide dari kanan -->
-            <div  class="menu-container">
-            <div  :class="{'buka-menu': buka }" class="menu fixed top-0 w-full h-screen py-16 px-6 lg:px-10 lg:w-1/2 bg-primary-100  right-0 z-40">
+    <transition name="slide"><!--slide dari kanan -->
+        <div class="menu-container">
+            <div :class="{ 'buka-menu': buka }"
+                class="menu fixed top-0 w-full h-screen py-16 px-6 lg:px-10 lg:w-1/2 bg-primary-100  right-0 z-40">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center h-full">
                     <div class="">
                         <ul class="menu-primary text-primary-600 flex flex-col gap-5 lg:text-2xl font-semibold">
                             <li><a href="/"> Home </a></li>
-                            <li><a href="#"> About Us </a></li>
+                            <li><a href="/about/overview"> About Us </a></li>
                             <li><a href="#"> News & Event </a></li>
                             <li><a href="#"> Contact Us </a></li>
                         </ul>
@@ -74,39 +79,40 @@ const buka = ref(false)
                 <div class="flex justify-between items-center gap-4 border-t pt-5 border-primary-300">
                     <div class="flex flex-wrap gap-4 items-center">
                         <span class="flex gap-2 items-center text-sm">
-                        <IconPhoneVue /> 
-                        <span> 021 xxx xxx xxx </span>
-                    </span>
-                    <span class="flex gap-2 items-center text-sm">
-                        <IconMiailVue /> 
-                        <span>somename@domain.co.id</span>
-                    </span>
+                            <IconPhoneVue />
+                            <span> 021 xxx xxx xxx </span>
+                        </span>
+                        <span class="flex gap-2 items-center text-sm">
+                            <IconMiailVue />
+                            <span>somename@domain.co.id</span>
+                        </span>
                     </div>
                     <div class="flex gap-2 items-center">
-                   <IconYoutubeVue />
-                   <IconInstagramVue />
+                        <IconYoutubeVue />
+                        <IconInstagramVue />
                     </div>
                 </div>
             </div>
-    </div>
-</transition>
+        </div>
+    </transition>
 </template>
 <style scoped>
-
 .menu {
-  @apply translate-x-full transition-all duration-300 ease-linear
+    @apply translate-x-full transition-all duration-300 ease-linear
 }
 
 .menu.buka-menu {
-  @apply translate-x-0 transition-all duration-300 ease-linear
+    @apply translate-x-0 transition-all duration-300 ease-linear
 }
 
 /* Tambahkan transisi fade untuk kontainer */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 
 .menu-primary a {
@@ -125,6 +131,4 @@ const buka = ref(false)
 .menu-secondary a {
     @apply hover:text-primary-600 hover:font-medium duration-200;
 }
-
-
 </style>

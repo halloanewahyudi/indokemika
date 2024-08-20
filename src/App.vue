@@ -1,7 +1,9 @@
 <script setup>
-import Navbar from './components/elements/Navbar.vue'
+import Navbar from './components/layouts/Navbar.vue'
 import Loading from './components/elements/Loading.vue'
+
 import { ref } from 'vue';
+import SectionFooter from './components/layouts/SectionFooter.vue';
 
 // State untuk mengontrol tampilan loading
 const isLoading = ref(true);
@@ -11,7 +13,7 @@ const simulateLoading = () => {
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;
-  }, 3000); // Durasi loading 3 detik
+  }, 2000); // Durasi loading 2 detik
 };
 
 // Set loading to false after initial load
@@ -28,6 +30,7 @@ setTimeout(() => {
     <main v-else>
       <Navbar />
       <router-view></router-view>
+<SectionFooter />
     </main>
   </main>
 
