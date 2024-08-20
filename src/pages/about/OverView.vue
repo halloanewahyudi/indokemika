@@ -1,5 +1,10 @@
+<script setup>
+import { onMounted, ref } from 'vue';
+
+
+</script>
 <template>
-  <div class="content">
+  <div class="content"> 
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam vitae quasi consequatur iure, libero
       necessitatibus nesciunt laudantium nulla recusandae neque voluptatibus cumque excepturi eveniet suscipit! Qui nam

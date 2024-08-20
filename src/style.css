@@ -8,6 +8,9 @@
 html,body{
     @apply overflow-x-hidden;
 }
+
+
+
 .plus-jakarta-sans-font {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
@@ -51,3 +54,11 @@ small{
 .ls{
     letter-spacing: 10px;
 }
+
+
+    .gdc_row {
+        @apply flex flex-col lg:flex-row flex-wrap gap-8;
+    }
+    .gdc_chalf {
+        @apply w-full lg:w-1/2
+    }

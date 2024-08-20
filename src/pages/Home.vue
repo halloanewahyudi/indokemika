@@ -16,6 +16,7 @@ import ApplicationProducts from '../components/sections/home/ApplicationProducts
 import Loading from '../components/elements/Loading.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
 import Products from '../components/sections/home/Products.vue'
+import Popup from '../components/elements/Popup.vue'
 
 
 // Definisikan section data
@@ -78,6 +79,7 @@ onUnmounted(() => {
 </script>
 <template>
     <main>
+      <Popup />
         <div class="nav-bullet z-50 fixed top-1/2 -translate-y-1/2  left-6 hidden lg:flex flex-col justify-between items-center ">
        <!-- ini nantinya sebuah navigasi bullet jika salahsatu di klik manka akan scroll section yang di tuju berdasrkan data-index -->
         <div :class="{ active: activeSection === section.index }" class="nav-item flex flex-col items-center w-4 h-max" v-for="section in sections" :key="section.index">

@@ -1,8 +1,10 @@
 <script setup>
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
+import { usePages } from '../../store/pages';
+
+const page = usePages()
 const route = useRoute()
 
 const sidebar = ref(null)

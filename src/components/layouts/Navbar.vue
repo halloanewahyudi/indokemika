@@ -38,7 +38,7 @@ const buka = ref(false)
             <nav class="flex justify-between items-center gap-2 py-2">
                 <div class="logo">
                     <router-link to="/">
-                        <img src="../../assets/logo.png" alt="" srcset="" class="h-14">
+                        <img src="../../assets/logo-transparent.png" alt="" srcset="" class="h-16">
                     </router-link>
                 </div>
                 <div>

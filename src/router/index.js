@@ -1,6 +1,7 @@
 
+import { createPinia } from 'pinia';
 import { createRouter, createWebHistory } from 'vue-router';
-// image
+
 const routes = [
   { path: '/',
     name:'Home',
