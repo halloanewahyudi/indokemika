@@ -51,7 +51,7 @@ const top = {
                     <router-link to="/about/overview">
                         <span> Company Overview </span>
                     </router-link>
-                    <router-link to="/">
+                    <router-link to="/about/milestone">
                         <span>Milestone </span>
                     </router-link>
                     <router-link to="/"> <span>Vision & Mission </span>
