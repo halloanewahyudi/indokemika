@@ -1,7 +1,12 @@
 <script setup>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import { onMounted, ref } from 'vue';
+import { useMouseInElement } from '@vueuse/core'
+
 import '@splidejs/vue-splide/css'
+const target = ref(null)
+const { x, y, isOutside } = useMouseInElement(target)
+
 const milestone = [
     {
         year: '1987',
@@ -58,8 +63,12 @@ const milestone = [
             years we extended our product portfolio by forging partnerships with leading suppliers of chemicals from
             around the world.
         </p>
-
-        <div class="p-6 rounded-xl bg-secondary-200 mb-5">
+        
+        <div ref="target" class="p-6 rounded-xl bg-secondary-200 mb-5 relative">
+            <Transition >
+                <div ref="swipe" v-if="isOutside === false" class=" absolute top-2 left-2 z-10 p-2 bg-secondary-200 bg-opacity-90 text-primary-950 text-sm italic rounded-lg"> Swipe slide timeline </div>
+            </Transition>
+          
             <Splide :options="{
                 perPage: 5,
                 arrows: false,
@@ -100,5 +109,15 @@ const milestone = [
 }
 .splide__slide.is-active{
    
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
