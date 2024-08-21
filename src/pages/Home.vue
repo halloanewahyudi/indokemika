@@ -105,7 +105,7 @@ onUnmounted(() => {
     <div class=" pt-20  bg-primary-100 rounded-t-[100px] ">
       <Products data-index="2" id="three" class="section  relative" />
     <!--   <ExploreCompany data-index="3" id="four" class="section pt-10 relative z-10 " /> -->
-       <div class="flex flex-col justify-center items-center min-h-max">
+       <div class="flex flex-col justify-center items-center mt-10">
         <Peta />
        </div>
      
