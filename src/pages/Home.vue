@@ -18,6 +18,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import Products from '../components/sections/home/Products.vue'
 import Popup from '../components/elements/Popup.vue'
 import Sertificate from '../components/sections/home/Sertificate.vue'
+import Peta from '../components/Peta.vue'
 
 
 
@@ -103,11 +104,15 @@ onUnmounted(() => {
     <SectionTwo data-index="1" id="two" class="section sec2" />
     <div class=" pt-20  bg-primary-100 rounded-t-[100px] ">
       <Products data-index="2" id="three" class="section  relative" />
-      <ExploreCompany data-index="3" id="four" class="section pt-10 relative z-10 " />
+    <!--   <ExploreCompany data-index="3" id="four" class="section pt-10 relative z-10 " /> -->
+       <div class="flex flex-col justify-center items-center min-h-max">
+        <Peta />
+       </div>
+     
     </div>
-    <div class="bg-secondary-100 pt-44 -mt-28 pb-16 relative">
+    <div class="bg-secondary-100  py-16 relative">
     <!--   <SectionFive data-index="4" id="five" class="section relative z-0 " /> -->
-      <Sertificate />
+      <Sertificate data-index="3" id="three" />
     </div>
 
   </main>
