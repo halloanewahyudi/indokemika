@@ -34,7 +34,7 @@ const posts = [
 
 </script>
 <template>
-    <section class="section py-20 bg-primary-50 lg:pt-60">
+    <section class="">
         <div class="container">
             <div class="max-w-[768px] mx-auto pb-16 text-center">
                 <h4 class="text-primary-600">Credibilities and Excellence</h4>
