@@ -59,7 +59,7 @@ const milestone = [
             around the world.
         </p>
 
-        <div class="p-6 rounded-xl bg-primary-100 mb-5">
+        <div class="p-6 rounded-xl bg-secondary-200 mb-5">
             <Splide :options="{
                 perPage: 5,
                 arrows: false,
@@ -69,7 +69,7 @@ const milestone = [
                 <SplideSlide v-for="item in milestone" :key="item">
                     <div class="text-center flex flex-col justify-center items-center gap-1 max-w-[300px] w-full">
                         <div
-                            class="p-3 rounded-full flex justify-center items-center text-2xl bg-secondary-200 w-20 h-20">
+                            class="p-3 rounded-full flex justify-center items-center text-2xl bg-primary-900 text-white w-20 h-20">
                             {{ item.year }}
                         </div>
                         <div class="text-sm"> {{ item.description }}</div>
@@ -84,7 +84,10 @@ const milestone = [
             And we look confidently into the future, as we will further strengthen our position as a leading supplier of
             integrative chemical solutions to the Indonesian market place.
         </p>
-
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <img src="https://placehold.co/600x400/dedede/FFF" alt="" srcset="" class="rounded-xl">
+      <img src="https://placehold.co/600x400/dedede/FFF" alt="" srcset="" class="rounded-xl" >
+    </div>
     </div>
 </template>
 <style lang="postcss" scoped>
