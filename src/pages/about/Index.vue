@@ -54,12 +54,12 @@ const top = {
                     <router-link to="/about/milestone">
                         <span>Milestone </span>
                     </router-link>
-                    <router-link to="/"> <span>Vision & Mission </span>
+                    <router-link to="/about/vision-mission"> <span>Vision & Mission </span>
                     </router-link>
-                    <router-link to="/">
+                    <router-link to="/about/code-of-conduct">
                         <span> Code of Conduct </span>
                     </router-link>
-                    <router-link to="/">
+                    <router-link to="/about/logistic-facility">
                         <span>Logistic & Facility </span>
                     </router-link>
                 </div>
@@ -105,7 +105,10 @@ const top = {
     }
 
     .router-link-active {
-        @apply border-secondary-200
+        &::before {
+            content: '';
+            @apply absolute top-0 left-0 bg-secondary-200 w-full h-full rounded-r-full z-0 border-l-4 border-secondary-500;
+        }
     }
 }
 </style>
