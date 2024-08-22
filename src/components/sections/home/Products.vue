@@ -69,7 +69,7 @@ const products = [
                     <SplideSlide v-for="(item, index) in products" :key="index" class="">
                         <div class="rounded-xl overflow-hidden relative text-center bg-black">
                             <img :src="item.image" alt="" srcset="" class="w-full h-[300px] object-cover">
-                            <div class="p-4 bg-secondary-200 h-full">
+                            <div class="p-4 bg-primary-200 h-full">
                                 <span class="font-semibold text-[#275317]">{{ item.name }}</span>
                             </div>
                         </div>

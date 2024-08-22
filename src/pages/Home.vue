@@ -19,7 +19,7 @@ import Products from '../components/sections/home/Products.vue'
 import Popup from '../components/elements/Popup.vue'
 import Sertificate from '../components/sections/home/Sertificate.vue'
 import Peta from '../components/Peta.vue'
-
+import Partner from '../components/sections/home/Partner.vue'
 
 
 // Definisikan section data
@@ -83,9 +83,9 @@ onUnmounted(() => {
 <template>
   <main>
     <Popup />
-    <div
+  <!--   <div
       class="nav-bullet z-50 fixed top-1/2 -translate-y-1/2  left-6 hidden lg:flex flex-col justify-between items-center ">
-      <!-- ini nantinya sebuah navigasi bullet jika salahsatu di klik manka akan scroll section yang di tuju berdasrkan data-index -->
+   
       <div :class="{ active: activeSection === section.index }" class="nav-item flex flex-col items-center w-4 h-max"
         v-for="section in sections" :key="section.index">
         <div class="flex gap-2 items-center justify-center">
@@ -98,7 +98,7 @@ onUnmounted(() => {
         </div>
         <div class="line w-0.5 h-16 bg-primary-100  block bodrder-l"></div>
       </div>
-    </div>
+    </div> -->
 
     <SectionOne data-index="0" id="one" class="section" />
     <SectionTwo data-index="1" id="two" class="section sec2" />
@@ -114,7 +114,11 @@ onUnmounted(() => {
     <!--   <SectionFive data-index="4" id="five" class="section relative z-0 " /> -->
       <Sertificate data-index="3" id="three" />
     </div>
-
+  <section class="py-16 bg-primary-500">
+    <div class="container">
+      <Partner />
+    </div>
+  </section>
   </main>
 </template>
 <style scoped>

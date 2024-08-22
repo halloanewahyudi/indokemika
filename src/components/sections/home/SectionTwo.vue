@@ -22,7 +22,7 @@ import AnimScroll from '../../elements/AnimScroll.vue'
                 <div class="lg:col-span-7 py-16">
                     <anim-scroll>
                         <Summary class="max-w-[500px]" subtitle="Who We Are"
-                            title="to Enhance Quality of Lives "
+                            title="A Leading Supplier of Chemicals to Various Industries "
                             summary="For over a decade, Indokemika has been a leading supplier of chemicals to various industries in Indonesia. With a comprehensive product portfolio and suppoirted by leading chemical producers from around the world, we are able to positon ourselves among the biggest chemicals manufacturing and distribution company. "
                             link="#" readmore_position="justify-end" />
                     </anim-scroll>
