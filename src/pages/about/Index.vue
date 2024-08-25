@@ -2,6 +2,7 @@
 
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
+import DividerVue from '../../components/Divider.vue';
 import { usePages } from '../../store/pages';
 
 const page = usePages()
@@ -9,45 +10,46 @@ const route = useRoute()
 
 const sidebar = ref(null)
 onMounted(() => {
-   // scroll sidebar
-document.addEventListener('scroll', function() {
-	const sidebar = document.querySelector('.sidebar');
-	const scrollTop = window.scrollY;
+    // scroll sidebar
+    document.addEventListener('scroll', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const scrollTop = window.scrollY;
 
-	// create styles object
-const top = {
-	top: '100px',
-	position: 'fixed',
-  }
-  
-  const center = {
-	top: '0',
-	position: 'relative',
-  }
-  
-	if (scrollTop > 400) {
-		Object.assign(sidebar.style, top)
-	 //  sidebar.style.top = '100px';
-	} else {
-	 //  sidebar.style.top = '0px';
-	  Object.assign(sidebar.style, center)
-	}
+        // create styles object
+        const top = {
+            top: '100px',
+            position: 'fixed',
+        }
 
-	console.log(sidebar.style.top);
-  });
+        const center = {
+            top: '0',
+            position: 'relative',
+        }
+
+        if (scrollTop > 400) {
+            Object.assign(sidebar.style, top)
+            //  sidebar.style.top = '100px';
+        } else {
+            //  sidebar.style.top = '0px';
+            Object.assign(sidebar.style, center)
+        }
+
+        console.log(sidebar.style.top);
+    });
 })
 </script>
 <template>
     <div class="bg-primary-50 relative">
-        <div
-            class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-primary-950 to-white z-10 opacity-50">
+        <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-primary-950 to-black z-10 opacity-50">
         </div>
         <img :src="`${route.meta.banner}`" class="hero w-full h-[380px] object-cover ">
+        <DividerVue class="absolute left-0 -bottom-1 z-20" />
     </div>
     <div class="container py-20 relative content-wrapper">
         <div class=" grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 lg:divide-x  ">
             <div class="lg:col-span-3 ">
-                <div ref="sidebar" class="sidebar bg-white p-6 rounded-2xl z-40 flex flex-col divide-y divide-primary-100 duration-300">
+                <div ref="sidebar"
+                    class="sidebar bg-white p-6 rounded-2xl z-40 flex flex-col divide-y divide-primary-100 duration-300">
                     <router-link to="/about/overview">
                         <span> Company Overview </span>
                     </router-link>
@@ -64,17 +66,14 @@ const top = {
                     </router-link>
                 </div>
             </div>
+
             <div class="lg:col-span-9 lg:pl-10">
+
                 <div class="mb-5">
                     <h2 class="mb-4 text-2xl">{{ route.meta.title }}</h2>
                     <div class="w-20 lg:w-44 h-1.5 bg-secondary-200"></div>
                 </div>
-
-                <router-view v-slot="{ Component, route }" class="">
-  <transition :name="route.meta.transition">
-    <component :is="Component" />
-  </transition>
-</router-view>
+                <router-view></router-view>
             </div>
         </div>
     </div>
@@ -110,5 +109,15 @@ const top = {
             @apply absolute top-0 left-0 bg-secondary-200 w-full h-full rounded-r-full z-0 border-l-4 border-secondary-500;
         }
     }
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
 }
 </style>

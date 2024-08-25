@@ -7,8 +7,6 @@ import IconInstagramVue from '../../icons/IconInstagram.vue';
 import IconYoutubeVue from '../../icons/IconYoutube.vue';
 import IconMiailVue from '../../icons/IconMiail.vue';
 import SlideVideo from '../../elements/SlideVideo.vue'
-
-
 const textAnim = () => {
     const items = gsap.utils.toArray('.text-cover .text')
     gsap.from(items, {
@@ -29,10 +27,11 @@ onMounted(() => {
 })
 </script>
 <template>
-    <section class=" relative mt-20">
-        <div class="container  relative">
+    <section class=" relative ">
+
+        <div class="  relative">
             <div
-                class="text-cover absolute lg:bottom-5 left-20  lg:-translate-y-1/2 rounded-2xl p-6 lg:p-10 text-secondary-50 z-10">
+                class="text-cover absolute lg:top-1/2 left-20  lg:-translate-y-1/2 rounded-2xl p-6 lg:p-10 text-secondary-50 z-10">
                 <h1 class="text text-4xl lg:text-5xl">To Create Values </h1>
                 <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
             </div>
@@ -50,5 +49,6 @@ onMounted(() => {
                 <IconMiailVue />
             </a>
         </div>
+   
     </section>
 </template>

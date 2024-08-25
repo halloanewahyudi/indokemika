@@ -1,157 +1,70 @@
 <script setup>
-import Slideshow from '../components/elements/SlideshowTwo.vue'
-import IconInstagramVue from '../components/icons/IconInstagram.vue'
-import IconMiailVue from '../components/icons/IconMiail.vue'
-import IconYoutubeVue from '../components/icons/IconYoutube.vue'
+import SlideshowVue from "../components/home/Slideshow.vue";
+import WhoWeAreVue from "../components/home/WhoWeAre.vue";
+import Counter from '../components/home/Counter.vue'
+import Product from '../components/home/Product.vue'
+import Network from "../components/home/Network.vue";
+import Sertification from '../components/home/Cretificate.vue'
+import Partner from "../components/home/Partner.vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted } from "vue";
+import SectionTitle from "../components/elements/SectionTitle.vue";
+import { usePosts } from "../store/posts";
 
-import SectionOne from '../components/sections/home/SectionOne.vue'
-import SectionTwo from '../components/sections/home/SectionTwo.vue'
-import SectionThree from '../components/sections/home/SectionThree.vue'
-import ExploreCompany from '../components/sections/home/ExploreCompany.vue'
-import SectionFive from '../components/sections/home/SectionFive.vue'
-import SectionSix from '../components/sections/home/SectionSix.vue'
-import SectionFooter from '../components/layouts/SectionFooter.vue'
-import AplProducts from '../components/sections/home/AplProducts.vue'
-import ApplicationProducts from '../components/sections/home/ApplicationProducts.vue'
-import Loading from '../components/elements/Loading.vue'
-import { onMounted, onUnmounted, ref } from 'vue'
-import Products from '../components/sections/home/Products.vue'
-import Popup from '../components/elements/Popup.vue'
-import Sertificate from '../components/sections/home/Sertificate.vue'
-import Peta from '../components/Peta.vue'
-import Partner from '../components/sections/home/Partner.vue'
-
-
-// Definisikan section data
-const sections = ref([
-  { index: 0, id: 'one' },
-  { index: 1, id: 'two' },
-  { index: 2, id: 'three' },
-  { index: 3, id: 'four' },
-  { index: 4, id: 'five' }
-]);
-
-
-// State untuk menyimpan section aktif
-const activeSection = ref(null);
-
-// Fungsi untuk scroll ke section yang dituju
-const scrollToSection = (index) => {
-  const section = document.querySelector(`[data-index="${index}"]`);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-// Fungsi untuk memeriksa apakah elemen terlihat di viewport
-const isElementInViewport = (el) => {
-  const rect = el.getBoundingClientRect();
-  const midPoint = rect.top + rect.height / 2;
-  return (
-    midPoint >= 0 &&
-    midPoint <= (window.innerHeight || document.documentElement.clientHeight)
-  );
-};
-
-// Event handler untuk scroll
-const onScroll = () => {
-  let found = false;
-  for (const section of sections.value) {
-    const el = document.querySelector(`[data-index="${section.index}"]`);
-    if (el && isElementInViewport(el)) {
-      activeSection.value = section.index;
-      found = true;
-      console.log(`Active section: ${section.index}`); // Debug log
-      break;
-    }
-  }
-  if (!found) {
-    activeSection.value = null;
-  }
-};
+const post =  usePosts();
 
 onMounted(() => {
-  window.addEventListener('scroll', onScroll);
-  onScroll(); // Initial check
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', onScroll);
-});
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.fromTo('.aksen', {
+        scale: 1,
+    }, {
+        scale: 2,
+        scrollTrigger: {
+            trigger: '.counter',
+            scrub: 1
+        }
+    })
+})
 
 </script>
+
 <template>
-  <main>
-    <Popup />
-  <!--   <div
-      class="nav-bullet z-50 fixed top-1/2 -translate-y-1/2  left-6 hidden lg:flex flex-col justify-between items-center ">
-   
-      <div :class="{ active: activeSection === section.index }" class="nav-item flex flex-col items-center w-4 h-max"
-        v-for="section in sections" :key="section.index">
-        <div class="flex gap-2 items-center justify-center">
-          <button class="bullet w-2 h-2 block rounded-full border-primary-500 border shrink-0"
-            @click="scrollToSection(section.index)" :class="{ active: activeSection === section.index }">
-          </button>
-          <span class="number absolute -right-3 text-sm text-primary-500">
-            {{ section.index + 1 }}
-          </span>
-        </div>
-        <div class="line w-0.5 h-16 bg-primary-100  block bodrder-l"></div>
-      </div>
-    </div> -->
-
-    <SectionOne data-index="0" id="one" class="section" />
-    <SectionTwo data-index="1" id="two" class="section sec2" />
-    <div class=" pt-20  bg-primary-100 rounded-t-[100px] ">
-      <Products data-index="2" id="three" class="section  relative" />
-    <!--   <ExploreCompany data-index="3" id="four" class="section pt-10 relative z-10 " /> -->
-       <div class="flex flex-col justify-center items-center mt-10">
-        <Peta />
-       </div>
-     
-    </div>
-    <div class="bg-secondary-100  py-16 relative">
-    <!--   <SectionFive data-index="4" id="five" class="section relative z-0 " /> -->
-      <Sertificate data-index="3" id="three" />
-    </div>
-  <section class="py-16 bg-primary-500">
-    <div class="container">
-      <Partner />
-    </div>
-  </section>
-  </main>
+    <main class="home-page">
+        <section id="slideshow" class="slideshow relative mb-20">
+            <SlideshowVue />
+        </section>
+        <section id="who-we-are" class="mb-20">
+            <WhoWeAreVue />
+        </section>
+        <section id="Statistic" class=" counter mb-20 ">
+            <div class="container">
+                <div
+                    class="px-6 py-16 bg-primary-600 text-white relative rounded-xl overflow-hidden flex flex-col justify-center items-center">
+                    <Counter class="relative z-10 mx-auto" />
+                    <img src="/aksen.png" alt="" class="aksen absolute top-1/2 left-1/2 -translate-x-1/2 ">
+                </div>
+            </div>
+        </section>
+        <section id="products" class="mb-10">
+            <Product />
+        </section>
+        <section id="map" class="py-16 bg-primary-600 ">
+            <SectionTitle bg_line="bg-primary-50" class="text-primary-50" title="Office Network" sub_title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, architecto." />
+            <Network class="mx-auto max-w-screen-lg -mt-10 -mb-10  relative" />
+           
+        </section>
+        <section id="sertification" class="py-16 bg-secondary-200 ">
+            <SectionTitle title="Our Sertification" sub_title="Our products comply to world class standards and mandatory certifications." />
+            <Sertification />
+        </section>
+        <section id="partner" class="py-16 bg-neutral-100">
+            <div class="container">
+                <SectionTitle title="Our Partner" sub_title="Indokemika Group is trusted and have long partnerships with a number of leading international companies." />
+                <Partner />
+            </div>
+        </section>
+    </main>
 </template>
-<style scoped>
-.bullet {
-  @apply flex flex-col items-center justify-center relative bg-primary-50 block;
-}
 
-.bullet.active {
-  @apply bg-primary-500 h-4 w-4 transition-all duration-300 ease-linear border-secondary-200;
-}
-
-.nav-bullet::after {
-  content: '';
-  @apply border-l border-primary-200 block h-full w-2;
-}
-
-.nav-item:last-child .line {
-  display: none;
-}
-
-.nav-item .number {
-  display: none;
-  font-size: 12px;
-  font-style: italic;
-}
-
-.nav-item.active .number {
-  display: block;
-}
-
-.sec2 {
-  background: url('../assets/bg-aksen.png')no-repeat right center;
-  background-size: 30%;
-  background-position-x: 110%;
-}
-</style>
+<style lang="postcss" scoped></style>
