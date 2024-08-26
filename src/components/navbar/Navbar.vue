@@ -130,7 +130,7 @@ background: linear-gradient(0deg, rgba(32,40,48,0) 0%, rgba(255,255,255,0.667104
     @apply border-b-4 border-primary-500 flex fixed w-full top-0 left-0 z-50 bg-white;
 
     .logo {
-        @apply py-2;
+        @apply py-1;
 
         img {
             max-width: 60px;
