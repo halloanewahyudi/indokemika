@@ -40,7 +40,7 @@
                         <span>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, ducimus!
                         </span>
-                   <router-link class="btn max-w-max"> Read more</router-link>
+                   <router-link to="/" class="btn max-w-max"> Read more</router-link>
                         </div>
                     <div class="px-6">
                         <ul class="mega-menu-menu">
