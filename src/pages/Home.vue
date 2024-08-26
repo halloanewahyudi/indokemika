@@ -55,7 +55,7 @@ onMounted(() => {
            
         </section>
         <section id="sertification" class="py-16 bg-neutral-100 bg-opacity-30 relative">
-            <div class="absolute w-full h-full top-0 left-0 bg-black opacity-60 "></div>
+       <!--      <div class="absolute w-full h-full top-0 left-0 bg-black opacity-60 "></div> -->
             <div class="relative z-10">
                 <SectionTitle class="text-white"  title="Our Sertification" sub_title="Our products comply to world class standards and mandatory certifications." />
                 <Sertification class=" z-10" />
