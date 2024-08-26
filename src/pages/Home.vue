@@ -54,7 +54,7 @@ onMounted(() => {
             <Network class="mx-auto max-w-screen-lg -mt-10 -mb-10  relative" />
            
         </section>
-        <section id="sertification" class="py-16 bg-secondary-200 ">
+        <section id="sertification" class="py-16 bg-neutral-100 ">
             <SectionTitle title="Our Sertification" sub_title="Our products comply to world class standards and mandatory certifications." />
             <Sertification />
         </section>
