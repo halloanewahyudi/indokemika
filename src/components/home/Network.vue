@@ -240,6 +240,7 @@ onMounted(() => {
 </script>
 
 <style lang="postcss" scoped>
+
 .pin {
     @apply cursor-pointer fill-red-500;
 

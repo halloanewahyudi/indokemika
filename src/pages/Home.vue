@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
     <main class="home-page">
-        <section id="slideshow" class="slideshow relative mb-20">
+        <section id="slideshow" class="slideshow relative p-0 mb-20">
             <SlideshowVue />
         </section>
         <section id="who-we-are" class="mb-20">
@@ -49,8 +49,8 @@ onMounted(() => {
         <section id="products" class="mb-10">
             <Product />
         </section>
-        <section id="map" class="py-16 bg-primary-600 ">
-            <SectionTitle bg_line="bg-primary-50" class="text-primary-50" title="Office Network" sub_title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, architecto." />
+        <section id="map" class="py-16 ">
+            <SectionTitle bg_line="bg-primary-600" class="" title="Office Network" sub_title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, architecto." />
             <Network class="mx-auto max-w-screen-lg -mt-10 -mb-10  relative" />
            
         </section>
@@ -67,4 +67,11 @@ onMounted(() => {
     </main>
 </template>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+#map{
+    background-image: url('./bg-peta.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+</style>

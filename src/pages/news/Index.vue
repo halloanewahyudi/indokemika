@@ -7,6 +7,10 @@
         <DividerVue class="absolute left-0 -bottom-1 z-20" />
     </div>
     <div class="container py-20">
+        <h2 class="mb-5">{{ route.meta.title }}</h2>
+        <div class="max-w-screen-lg mx-auto py-10">
+   <input type="text" class="rounded-xl p-2 w-full border">
+        </div>
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-10">
             <div class="" v-for="item in posts.posts" :key="item">
                 <div>

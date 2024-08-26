@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div class="relative p-0 m-0">
         <Splide ref="splideRef" :options="{
             type: 'fade',
             autoplay: true,
@@ -24,9 +24,12 @@
                 <h1 class="text text-4xl lg:text-5xl">To Create Values </h1>
                 <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
             </div>
-            <div class="absolute z-10 w-full h-full bg-gradient-to-tr from-primary-950 to-black opacity-50"></div>
+            <!-- <div class="absolute z-10 w-full h-full bg-gradient-to-tr from-primary-950 to-black opacity-50"></div> -->
      </Splide>
-     <DividerVue class="absolute -bottom-2 left-0 text-white" />
+<!--      <div class="absolute -bottom-5 w-full z-40 h-max">
+        <DividerVue class="" />
+     </div> -->
+    
     </div>
 </template>
 
