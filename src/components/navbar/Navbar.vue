@@ -109,8 +109,10 @@ onUnmounted(() => {
 
 <style lang="postcss" scoped>
 .navbar.light {
-    @apply text-white bg-transparent border-none ;
-    .menu{
+    @apply   border-none  ;
+    background: rgb(32,40,48);
+background: linear-gradient(0deg, rgba(32,40,48,0) 0%, rgba(255,255,255,0.6671043417366946) 53%, rgba(255,255,255,1) 100%);
+ .menu{
         li{
             &:hover{
                 a{

@@ -20,11 +20,11 @@
                 </li>
             </ul>
             <div
-                class="text-cover bg-primary-900 bg-opacity-60 backdrop:blur-lg lg:bg-transparent absolute  top-2/4 left-0 mx-6 lg:top-1/2 lg:left-20  rounded-2xl p-6 lg:p-10 text-secondary-50 z-20">
+                class="text-cover bg-primary-900 bg-opacity-60 backdrop:blur-lg lg:bg-transparent absolute  top-2/4 left-0 mx-6 lg:top-1/2 lg:left-20  rounded-2xl p-6 lg:p-10  z-20 text-primary-950">
                 <h1 class="text text-4xl lg:text-5xl">To Create Values </h1>
                 <p class="text text-xl">We bring ingredients and materials that made up useful products</p>
             </div>
-            <!-- <div class="absolute z-10 w-full h-full bg-gradient-to-tr from-primary-950 to-black opacity-50"></div> -->
+             <div class="layer absolute z-10 w-full h-full"></div> 
      </Splide>
 <!--      <div class="absolute -bottom-5 w-full z-40 h-max">
         <DividerVue class="" />
@@ -107,5 +107,10 @@ onMounted(async () => {
 
 .custom-pagination .active {
     @apply w-5 h-2  duration-300 opacity-100;
+}
+
+.layer{
+    background: rgb(200,200,200);
+    background: linear-gradient(0deg, rgba(200,200,200,0.19931722689075626) 0%, rgba(251,251,251,0.7259278711484594) 74%, rgba(255,255,255,1) 100%);
 }
 </style>
