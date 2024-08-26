@@ -49,7 +49,7 @@ onMounted(() => {
         <section id="products" class="mb-10">
             <Product />
         </section>
-        <section id="map" class="py-16 ">
+        <section id="map" class="py-16">
             <SectionTitle bg_line="bg-primary-600" class="" title="Office Network" sub_title=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, architecto." />
             <Network class="mx-auto max-w-screen-lg -mt-10 -mb-10  relative" />
            
@@ -69,7 +69,7 @@ onMounted(() => {
 
 <style lang="postcss" scoped>
 #map{
-    background-image: url('./bg-peta.jpg');
+    background-image: url('/bg-peta.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
